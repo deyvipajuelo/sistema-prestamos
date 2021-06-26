@@ -17,6 +17,7 @@
 		if ($vista === 'login' || $vista === '404') {
 			include('./Views/contents/'.$vista.'-view.php');
 		}else {
+			session_start(['name'=>'SPM']);
 	?>	
 	
 	<!-- Main container -->

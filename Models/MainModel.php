@@ -19,7 +19,8 @@ class MainModel
     /* ---------- Función ejecutar consultas simples ---------- */
     protected static function runSimpleQuery($query)
     {
-        $sql = self::connect()->prepare($query)->execute();
+        $sql = self::connect()->prepare($query);
+        $sql->execute();
         return $sql;
     }
     
