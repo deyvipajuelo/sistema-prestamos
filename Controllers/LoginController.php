@@ -22,6 +22,7 @@ class LoginController extends LoginModel{
                     confirmButtonText: "Aceptar"
                 })
             </script>');
+            exit();
         }
 
         $pass = MainModel::encryption($password);
@@ -32,7 +33,7 @@ class LoginController extends LoginModel{
         ];
 
         $dataAcountLogin = LoginModel::login($dataLogin);
-
+        // var_dump('Aquiiiii');
         if ($dataAcountLogin->rowCount() === 1) {
             $row = $dataAcountLogin->fetch();
 
